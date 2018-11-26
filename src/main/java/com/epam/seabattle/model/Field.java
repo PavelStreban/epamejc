@@ -58,8 +58,8 @@ public class Field {
                     if (i > 0) {
                         do {
                             error = false;
-                            println("Задайте ориентацию " + (j + 1) + "-го " + deckQty
-                                    + "-палубного корабля(h - горизонтальная, v - вертикальная):");
+                            println("Orientation " + (j + 1) + "deck " + deckQty
+                                    + "-ship(h - horizontal, v - vertical):");
                             isHorizontalStr = (new Scanner(System.in)).nextLine();
                             if (isHorizontalStr.equals("h")) {
                                 isHorizontal = true;
@@ -69,14 +69,14 @@ public class Field {
                                 } else error = true;
                             }
                             if (error) {
-                                println("Неверный символ! Повторите ввод.");
+                                println("Symbol is not correct! Please, enter one more.");
                             }
                         } while (error);
                     }
                     do {
                         error = false;
-                        println("Введите координату верхней или левой палубы " + (j + 1) + "-го " + deckQty
-                                + "-палубного корабля(пример ввода: d4)");
+                        println("Enter the coordinate of the upper or left " + (j + 1) + "deck " + deckQty
+                                + "-ship (for example: d4)");
                         String s = (new Scanner(System.in)).nextLine();
                         upperLeftX = s.charAt(0) - 97;
                         upperLeftY = s.charAt(1) - 49;
@@ -87,11 +87,11 @@ public class Field {
                             error = true;
                         }
                         if (error) {
-                            println("Значение за пределами поля! Попробуйте еще раз.");
+                            println("Value out of bounds! Pleas, try again.");
                         }
                     } while (error);
                     if (!checkFreeSpace(upperLeftX, upperLeftY, deckQty, isHorizontal, this)) {
-                        println("Здесь нельзя располагать корабль. Попробуйте еще раз.");
+                        println("You can not have a ship. Please, try again.");
                     }
                 }
                 while (!checkFreeSpace(upperLeftX, upperLeftY, deckQty, isHorizontal, this));

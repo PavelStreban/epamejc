@@ -16,10 +16,10 @@ public class Game {
     boolean player1ShotRight;
 
     public void newStart() {
-        println("Добрый день! Пожалуйста, введите Ваше имя: ");
+        println("Hello! Please, enter your name: ");
         player1.name = (new Scanner(System.in)).nextLine();
         player2.name = "robot";
-        println("Начнем игру, " + player1.name + ".");
+        println("Game is started, " + player1.name + ".");
         init();
         player1ShotRight = true;
         while (player1.allDeckQty != 0 && player2.allDeckQty != 0) {
@@ -35,9 +35,9 @@ public class Game {
             textView.showSea(player1, player2, true, false);
         }
         if (player1.allDeckQty == 0) {
-            println("Победил игрок " + player2.name + "!");
+            println("Player win " + player2.name + "!");
         } else {
-            println("Победил игрок " + player1.name + "!");
+            println("Player win " + player1.name + "!");
         }
     }
 

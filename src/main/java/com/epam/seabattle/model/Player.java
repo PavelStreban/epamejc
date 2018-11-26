@@ -84,7 +84,7 @@ public class Player {
             boolean error;
             do {
                 error = false;
-                println("Ваш выстрел, " + this.name + ". Введите координату (пример ввода: d4)");
+                println("Your shot, " + this.name + ". Enter coordinate (for example: d4)");
                 String s = (new Scanner(System.in)).nextLine();
                 x = s.charAt(0) - 97;
                 y = s.charAt(1) - 49;
@@ -95,7 +95,7 @@ public class Player {
                     error = true;
                 }
                 if (error) {
-                    println("Значение за пределами поля! Попробуйте еще раз.");
+                    println("Value out of bounds! Please, try again.");
                 }
             } while (error);
         }
