@@ -28,7 +28,7 @@ public class TextView {
                     if (player.field.cells[i - 1][j - 1].isShoot) {
                         showOne[j][i] = "X";
                     } else {
-                        showOne[j][i] = "0";
+                        showOne[j][i] = "~";
                     }
                 } else {
                     if (player.field.cells[i - 1][j - 1].isShoot) {
@@ -37,7 +37,7 @@ public class TextView {
                         if (shipsIsVisible){
                             showOne[j][i] = "S";
                         } else {
-                            showOne[j][i] = "0";
+                            showOne[j][i] = "~";
                         }
                     }
                     if (player.field.cells[i - 1][j - 1].ship.liveDeckQty == 0) {
