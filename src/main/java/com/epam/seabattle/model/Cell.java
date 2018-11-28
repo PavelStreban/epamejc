@@ -9,9 +9,9 @@ public class Cell {
     public Ship ship = null;
     public boolean isShoot;
 
-    public Cell(int x, int y, Ship ship, boolean isShoot) {
-        this.xCoordinate = x;
-        this.yCoordinate = y;
+    public Cell(int xCoordinate, int yCoordinate, Ship ship, boolean isShoot) {
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
         this.ship = ship;
         this.isShoot = isShoot;
     }

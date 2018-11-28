@@ -76,7 +76,7 @@ public class Field {
                     do {
                         error = false;
                         println("Enter the coordinate of the upper or left " + (j + 1) + "deck " + deckQty
-                                + "-ship (for example: d4)");
+                                + "-ship (for example: c2)");
                         String s = (new Scanner(System.in)).nextLine();
                         upperLeftX = s.charAt(0) - 97;
                         upperLeftY = s.charAt(1) - 49;
